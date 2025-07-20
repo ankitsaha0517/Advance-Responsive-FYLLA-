@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fylla-Template</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <main>
+
+        <nav class="nav-bar">
+            <div class="nav-first">
+                <div class="Img-SVG">
+                    <img src="./assets/img/logo.png" alt="">
+                </div>
+                <h3 class="logo-name">FYLLA</h3>
+            </div>
+
+            <div class="nav-last">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="view-1">
+            <div class="text-con">
+                <h1>
+                    We are a digital agency from Lisbon.
+                </h1>
+                <p>
+                    Elevating brands through creative digital solutions, proudly representing Lisbon's vibrant innovation.
+                </p>
+            </div>
+
+            <div class="video-con">
+                <video autoplay muted loop src="./assets/rXAszXcrH4ELEBbdilxkxdbfmrE.mp4"></video>
+            </div>
+        </section>
+
+
+        <section class="view-2">
+                <h4>Our Clients</h4>
+        </section>
+
+    </main>
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("toggle");
+        });
+    </script>
 </body>
+
 </html>
