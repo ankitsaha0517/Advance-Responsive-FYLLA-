@@ -2,7 +2,7 @@ $fullweb-color: #fdfbf5;
 $h-font: "Syne", sans-serif;
 $b-font: "Santohi";
 $boder-under: "1px solid black";
-$s-font: 'Roboto Mono', monospace;
+$s-font: "Roboto Mono", monospace;
 
 @font-face {
   font-family: $b-font;
@@ -28,6 +28,7 @@ body {
   padding: 1rem;
 }
 main {
+  overflow: hidden;
   padding: 1rem;
   border: 1px solid black;
   width: 100%;
@@ -129,16 +130,59 @@ nav {
     }
   }
 }
-
-.view-2{
-    h4{
-        font-family: $s-font;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
+.common-padding {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.view-2 {
+  border-bottom: 1px solid black;
+  h4 {
+    font-family: $s-font;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
+.scroller {
+  padding-top: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 
+  .scroller__inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+  }
+
+  img {
+    height: 100%;
+    width: 15%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
 //large laptop L
 @media (min-width: 1440px) {
   body {
@@ -183,6 +227,11 @@ nav {
         height: 60vh;
         border-radius: 0.5vw;
       }
+    }
+  }
+  .scroller{
+    img{
+      width: 5%;
     }
   }
 }

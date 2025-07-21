@@ -23,6 +23,7 @@ body {
 }
 
 main {
+  overflow: hidden;
   padding: 1rem;
   border: 1px solid black;
   width: 100%;
@@ -121,12 +122,55 @@ nav .logo-name {
   border-radius: 15px;
 }
 
+.common-padding {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.view-2 {
+  border-bottom: 1px solid black;
+}
 .view-2 h4 {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 
+.scroller {
+  padding-top: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+.scroller .scroller__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  animation: scroll 20s linear infinite;
+}
+.scroller img {
+  height: 100%;
+  width: 15%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
 @media (min-width: 1440px) {
   body {
     padding: 2rem;
@@ -162,5 +206,8 @@ nav .logo-name {
   .view-1 .video-con video {
     height: 60vh;
     border-radius: 0.5vw;
+  }
+  .scroller img {
+    width: 5%;
   }
 }/*# sourceMappingURL=style.css.map */
