@@ -39,6 +39,12 @@ main h1,
 main h3 {
   font-family: "Syne", sans-serif;
 }
+main .sub-hed {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
 
 nav {
   display: flex;
@@ -128,12 +134,14 @@ nav .logo-name {
 }
 
 .view-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
   border-bottom: 1px solid black;
 }
 .view-2 h4 {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 400;
-  text-transform: uppercase;
   text-align: center;
 }
 
@@ -147,9 +155,9 @@ nav .logo-name {
 .scroller .scroller__inner {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 4rem;
   width: 100%;
-  animation: scroll 20s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 .scroller img {
   height: 100%;
@@ -171,20 +179,49 @@ nav .logo-name {
     transform: translateX(-40%);
   }
 }
-@media (min-width: 1440px) {
+.view-3 {
+  width: 100%;
+}
+.view-3 .view-3-left {
+  display: none;
+}
+.view-3 .view-3-right .box {
+  padding: 2rem 0;
+  border-bottom: 1px solid black;
+}
+.view-3 .view-3-right .box img {
+  width: 10vw;
+  height: 10vw;
+  margin-bottom: 12px;
+}
+.view-3 .view-3-right .box h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.view-3 .view-3-right .box p {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 1200px) {
   body {
-    padding: 2rem;
+    padding: 1.5rem;
   }
   nav .nav-first {
     gap: 1vw;
   }
   main {
-    padding: 2rem;
+    padding: 3rem;
+    padding-top: 2rem;
+  }
+  main .common-padding {
+    padding: 3rem 0;
   }
   .view-1 {
     flex-direction: row;
     padding: 4rem 0;
-    gap: 5rem;
+    gap: 2rem;
   }
   .view-1 .text-con {
     display: flex;
@@ -192,22 +229,71 @@ nav .logo-name {
     gap: 1.5rem;
   }
   .view-1 .text-con h1 {
-    font-size: 5.9rem;
+    font-size: 5rem;
     letter-spacing: -3px;
     line-height: 1;
   }
   .view-1 .text-con p {
-    font-size: 1.8rem;
-    width: 70%;
+    font-size: 1.5rem;
+    width: 82%;
   }
   .view-1 .video-con {
     overflow: hidden;
   }
   .view-1 .video-con video {
-    height: 60vh;
-    border-radius: 0.5vw;
+    height: 55vh;
+    border-radius: 1.5vw;
+  }
+  .view-2 {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .view-2 h4 {
+    padding: 1rem 2rem 1rem 0;
+    border-right: 1px solid black;
+  }
+  .scroller {
+    padding: 0;
+    width: 85%;
   }
   .scroller img {
-    width: 5%;
+    width: 6%;
+  }
+  .view-3 {
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    gap: 2rem;
+  }
+  .view-3 .view-3-left {
+    display: block;
+    width: 30%;
+    border-right: 1px solid black;
+  }
+  .view-3 .view-3-right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .view-3 .view-3-right .top, .view-3 .view-3-right .bottom {
+    display: flex;
+    gap: 3rem;
+  }
+  .view-3 .view-3-right .border {
+    height: 1px;
+    background: #000;
+  }
+  .view-3 .view-3-right .box {
+    padding: 0;
+    border: none;
+  }
+  .view-3 .view-3-right .box img {
+    width: 4vw;
+    height: 4vw;
+  }
+  .view-3 .view-3-right .box:nth-child(odd) {
+    border-right: 1px solid black;
   }
 }/*# sourceMappingURL=style.css.map */
