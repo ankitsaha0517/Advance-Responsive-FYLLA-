@@ -35,16 +35,6 @@ main .Img-SVG img {
   width: 100%;
   height: 100%;
 }
-main h1,
-main h3 {
-  font-family: "Syne", sans-serif;
-}
-main .sub-hed {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 1rem;
-}
 main .btn {
   background: #000;
   color: white;
@@ -121,11 +111,13 @@ nav .logo-name {
 }
 .view-1 .text-con h1 {
   font-size: 3rem;
+  font-family: "Syne", sans-serif;
+  line-height: 1;
+  font-weight: 500;
   letter-spacing: -1px;
-  line-height: 1.1;
-  font-weight: 600;
 }
 .view-1 .text-con p {
+  font-family: "Santohi";
   font-size: 1.3rem;
 }
 .view-1 .video-con {
@@ -153,7 +145,10 @@ nav .logo-name {
   border-bottom: 1px solid black;
 }
 .view-2 h4 {
-  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .scroller {
@@ -214,11 +209,18 @@ nav .logo-name {
 .view-3 .view-3-right .box p {
   font-size: 1.1rem;
 }
+.view-3 h4 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
 
 .view-4 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  border-bottom: 1px solid black;
 }
 
 .border {
@@ -235,10 +237,14 @@ nav .logo-name {
 }
 .view-4-left h1 {
   font-size: 2.5rem;
-  font-weight: 500;
   text-transform: uppercase;
+  font-family: "Syne", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -1px;
 }
 .view-4-left p {
+  font-family: "Santohi";
   font-size: 1.3rem;
   margin-top: 0.9rem;
 }
@@ -293,6 +299,42 @@ nav .logo-name {
   gap: 2rem;
 }
 
+.view-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view-5 h4 {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.view-5 h1 {
+  font-family: "Syne", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-size: 3rem;
+}
+.view-5 p {
+  font-family: "Santohi";
+  font-size: 1.3rem;
+}
+.view-5 .border {
+  display: none;
+}
+.view-5 .v5-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-5 .v5-right {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 @media (min-width: 1200px) {
   body {
     padding: 1.5rem;
@@ -319,8 +361,10 @@ nav .logo-name {
   }
   .view-1 .text-con h1 {
     font-size: 5rem;
-    letter-spacing: -3px;
+    font-family: "Syne", sans-serif;
     line-height: 1;
+    font-weight: 500;
+    letter-spacing: -1px;
   }
   .view-1 .text-con p {
     font-size: 1.5rem;
@@ -403,7 +447,10 @@ nav .logo-name {
   }
   .view-4-left h1 {
     font-size: 4rem;
+    font-family: "Syne", sans-serif;
     line-height: 1;
+    font-weight: 500;
+    letter-spacing: -1px;
   }
   .view-4-left p {
     font-size: 1.5rem;
@@ -429,5 +476,32 @@ nav .logo-name {
   }
   .view-4-bottom .v4-img-box {
     width: 46%;
+  }
+  .view-5 {
+    height: 60vh;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .view-5 .border {
+    display: block;
+    height: 100%;
+    width: 1px;
+  }
+  .view-5 .v5-left {
+    width: 60%;
+  }
+  .view-5 .v5-right {
+    width: 30%;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .view-5 h1 {
+    font-size: 4rem;
+  }
+  .view-5 p {
+    font-size: 1.5rem;
+    line-height: 1.7;
   }
 }/*# sourceMappingURL=style.css.map */
