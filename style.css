@@ -45,6 +45,17 @@ main .sub-hed {
   text-transform: uppercase;
   font-size: 1rem;
 }
+main .btn {
+  background: #000;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 7px;
+  padding: 6px 15px;
+  font-size: 0.9rem;
+}
 
 nav {
   display: flex;
@@ -204,6 +215,84 @@ nav .logo-name {
   font-size: 1.1rem;
 }
 
+.view-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.border {
+  height: 1px;
+  background: #000;
+}
+
+.view-4-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid black;
+}
+.view-4-left h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.view-4-left p {
+  font-size: 1.3rem;
+  margin-top: 0.9rem;
+}
+
+.view-4-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view-4-right .v4-img-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 32vh;
+}
+.view-4-right .v4-img-box .box-img-con {
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.view-4-right .v4-img-box .box-img-con img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all ease-in-out 0.5s;
+}
+.view-4-right .v4-img-box .box-img-con img:hover {
+  transform: scale(1.09);
+}
+.view-4-right .v4-img-box .box-img-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view-4-right .v4-img-box .box-img-text h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.view-4-right .v4-img-box .box-img-text h5 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.view-4-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 @media (min-width: 1200px) {
   body {
     padding: 1.5rem;
@@ -265,6 +354,7 @@ nav .logo-name {
     padding: 3rem 0;
     display: flex;
     gap: 2rem;
+    border-bottom: 1px solid black;
   }
   .view-3 .view-3-left {
     display: block;
@@ -277,8 +367,10 @@ nav .logo-name {
     flex-direction: column;
     gap: 5rem;
   }
-  .view-3 .view-3-right .top, .view-3 .view-3-right .bottom {
+  .view-3 .view-3-right .top,
+  .view-3 .view-3-right .bottom {
     display: flex;
+    justify-content: space-between;
     gap: 3rem;
   }
   .view-3 .view-3-right .border {
@@ -287,6 +379,7 @@ nav .logo-name {
   }
   .view-3 .view-3-right .box {
     padding: 0;
+    padding-right: 3.5rem;
     border: none;
   }
   .view-3 .view-3-right .box img {
@@ -295,5 +388,46 @@ nav .logo-name {
   }
   .view-3 .view-3-right .box:nth-child(odd) {
     border-right: 1px solid black;
+  }
+  .view-4 {
+    flex-direction: row;
+    gap: 2rem;
+    width: 100% !important;
+  }
+  .view-4-left {
+    width: 35% !important;
+    padding-right: 2rem;
+    border-right: 1px solid black;
+    padding-bottom: 0rem;
+    border-bottom: 0;
+  }
+  .view-4-left h1 {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .view-4-left p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .view-4-right {
+    width: 65% !important;
+  }
+  .view-4-right .view-4-top {
+    height: 50vh;
+    width: 100%;
+  }
+  .view-4-right .view-4-top .v4-img-box {
+    height: 100%;
+    width: 100%;
+  }
+  .view-4-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3rem;
+  }
+  .view-4-bottom .v4-img-box {
+    width: 46%;
   }
 }/*# sourceMappingURL=style.css.map */
